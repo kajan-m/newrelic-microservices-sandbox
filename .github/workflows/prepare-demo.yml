@@ -57,7 +57,7 @@ env:
 jobs:
   prepare-branch:
     name: Prepare Branch
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Backstage Branch
         uses: actions/checkout@v3
