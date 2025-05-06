@@ -20,11 +20,11 @@ resource "aws_eks_node_group" "nr_sandbox" {
   node_group_name = var.cluster_name
   node_role_arn   = aws_iam_role.nr_sandbox-node.arn
   subnet_ids      = aws_subnet.nr_sandbox.*.id
-  instance_types  = ["m5.xlarge"]
+  instance_types  = ["t3.large"]
 
   scaling_config {
-    desired_size = 3
-    max_size     = 5
+    desired_size = 2
+    max_size     = 3
     min_size     = 2
   }
 
