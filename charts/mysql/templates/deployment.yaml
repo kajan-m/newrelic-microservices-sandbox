@@ -50,7 +50,7 @@ spec:
           readinessProbe:
             exec:
               command:
-                - "mysqlcheck"
+                - "mariadb-check"
                 - "--password={{ .Values.container.mysqlRootPassword }}"
                 - "{{ .Values.container.mysqlDatabase }}"
                 - "{{ .Values.container.mysqlReadyTableName }}"
